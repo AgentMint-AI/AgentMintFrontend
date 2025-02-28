@@ -182,5 +182,5 @@ This project is for educational purposes only. Always do your own research befor
 ## 📞 Support
 
 
-- Join our [Discord](https://discord.gg/aimemecoin)
-- Follow us on [Twitter](https://twitter.com/chain_oracle)
+- Contact me on Discord: [Discord](https://discord.com/users/blockchainoracle_33249)
+- Contact  me on [Twitter](https://twitter.com/chain_oracle)
