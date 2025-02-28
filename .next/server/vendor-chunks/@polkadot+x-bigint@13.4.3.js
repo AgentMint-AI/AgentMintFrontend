@@ -1,0 +1,45 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "vendor-chunks/@polkadot+x-bigint@13.4.3";
+exports.ids = ["vendor-chunks/@polkadot+x-bigint@13.4.3"];
+exports.modules = {
+
+/***/ "(rsc)/./node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/index.js":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/index.js ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   BigInt: () => (/* binding */ BigInt),\n/* harmony export */   packageInfo: () => (/* reexport safe */ _packageInfo_js__WEBPACK_IMPORTED_MODULE_0__.packageInfo)\n/* harmony export */ });\n/* harmony import */ var _polkadot_x_global__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @polkadot/x-global */ \"(rsc)/./node_modules/.pnpm/@polkadot+x-global@13.4.3/node_modules/@polkadot/x-global/index.js\");\n/* harmony import */ var _packageInfo_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./packageInfo.js */ \"(rsc)/./node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/packageInfo.js\");\n\n\n/**\n * @internal\n *\n * There are _still_ some older environments (specifically RN < 0.70), that does\n * not have proper BigInt support - a non-working fallback is provided for those.\n *\n * We detect availability of BigInt upon usage, so this is purely to allow functional\n * compilation & bundling. Since we have operators such as *+-/ top-level, a number-ish\n * result is used here.\n */\nfunction invalidFallback() {\n    return Number.NaN;\n}\nconst BigInt = /*#__PURE__*/ (0,_polkadot_x_global__WEBPACK_IMPORTED_MODULE_1__.extractGlobal)('BigInt', invalidFallback);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvLnBucG0vQHBvbGthZG90K3gtYmlnaW50QDEzLjQuMy9ub2RlX21vZHVsZXMvQHBvbGthZG90L3gtYmlnaW50L2luZGV4LmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBbUQ7QUFDSjtBQUMvQztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNPLDZCQUE2QixpRUFBYSIsInNvdXJjZXMiOlsiL2hvbWUvYWJ1YmFrcmppbW9oL0Rlc2t0b3AvQ29kaW5nIFN0dWZmcy9oYWNrYXRob24vc2VjcmV0LW5ldHdvcmsvbWVtZUFpX2NvaW5fY3JlYXRvci9haS1tZW1lLWNvaW4tY3JlYXRvci9ub2RlX21vZHVsZXMvLnBucG0vQHBvbGthZG90K3gtYmlnaW50QDEzLjQuMy9ub2RlX21vZHVsZXMvQHBvbGthZG90L3gtYmlnaW50L2luZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGV4dHJhY3RHbG9iYWwgfSBmcm9tICdAcG9sa2Fkb3QveC1nbG9iYWwnO1xuZXhwb3J0IHsgcGFja2FnZUluZm8gfSBmcm9tICcuL3BhY2thZ2VJbmZvLmpzJztcbi8qKlxuICogQGludGVybmFsXG4gKlxuICogVGhlcmUgYXJlIF9zdGlsbF8gc29tZSBvbGRlciBlbnZpcm9ubWVudHMgKHNwZWNpZmljYWxseSBSTiA8IDAuNzApLCB0aGF0IGRvZXNcbiAqIG5vdCBoYXZlIHByb3BlciBCaWdJbnQgc3VwcG9ydCAtIGEgbm9uLXdvcmtpbmcgZmFsbGJhY2sgaXMgcHJvdmlkZWQgZm9yIHRob3NlLlxuICpcbiAqIFdlIGRldGVjdCBhdmFpbGFiaWxpdHkgb2YgQmlnSW50IHVwb24gdXNhZ2UsIHNvIHRoaXMgaXMgcHVyZWx5IHRvIGFsbG93IGZ1bmN0aW9uYWxcbiAqIGNvbXBpbGF0aW9uICYgYnVuZGxpbmcuIFNpbmNlIHdlIGhhdmUgb3BlcmF0b3JzIHN1Y2ggYXMgKistLyB0b3AtbGV2ZWwsIGEgbnVtYmVyLWlzaFxuICogcmVzdWx0IGlzIHVzZWQgaGVyZS5cbiAqL1xuZnVuY3Rpb24gaW52YWxpZEZhbGxiYWNrKCkge1xuICAgIHJldHVybiBOdW1iZXIuTmFOO1xufVxuZXhwb3J0IGNvbnN0IEJpZ0ludCA9IC8qI19fUFVSRV9fKi8gZXh0cmFjdEdsb2JhbCgnQmlnSW50JywgaW52YWxpZEZhbGxiYWNrKTtcbiJdLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOlswXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/index.js\n");
+
+/***/ }),
+
+/***/ "(rsc)/./node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/packageInfo.js":
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/packageInfo.js ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   packageInfo: () => (/* binding */ packageInfo)\n/* harmony export */ });\nconst packageInfo = { name: '@polkadot/x-bigint', path: ( true) ? new URL(\"file:///home/abubakrjimoh/Desktop/Coding%20Stuffs/hackathon/secret-network/memeAi_coin_creator/ai-meme-coin-creator/node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/packageInfo.js\").pathname.substring(0, new URL(\"file:///home/abubakrjimoh/Desktop/Coding%20Stuffs/hackathon/secret-network/memeAi_coin_creator/ai-meme-coin-creator/node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/packageInfo.js\").pathname.lastIndexOf('/') + 1) : 0, type: 'esm', version: '13.4.3' };\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvLnBucG0vQHBvbGthZG90K3gtYmlnaW50QDEzLjQuMy9ub2RlX21vZHVsZXMvQHBvbGthZG90L3gtYmlnaW50L3BhY2thZ2VJbmZvLmpzIiwibWFwcGluZ3MiOiI7Ozs7QUFBTyxzQkFBc0IsbUNBQW1DLEtBQThCLFlBQVksaU5BQWUsZ0NBQWdDLGlOQUFlLG1DQUFtQyxDQUFNIiwic291cmNlcyI6WyIvaG9tZS9hYnViYWtyamltb2gvRGVza3RvcC9Db2RpbmcgU3R1ZmZzL2hhY2thdGhvbi9zZWNyZXQtbmV0d29yay9tZW1lQWlfY29pbl9jcmVhdG9yL2FpLW1lbWUtY29pbi1jcmVhdG9yL25vZGVfbW9kdWxlcy8ucG5wbS9AcG9sa2Fkb3QreC1iaWdpbnRAMTMuNC4zL25vZGVfbW9kdWxlcy9AcG9sa2Fkb3QveC1iaWdpbnQvcGFja2FnZUluZm8uanMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IHBhY2thZ2VJbmZvID0geyBuYW1lOiAnQHBvbGthZG90L3gtYmlnaW50JywgcGF0aDogKGltcG9ydC5tZXRhICYmIGltcG9ydC5tZXRhLnVybCkgPyBuZXcgVVJMKGltcG9ydC5tZXRhLnVybCkucGF0aG5hbWUuc3Vic3RyaW5nKDAsIG5ldyBVUkwoaW1wb3J0Lm1ldGEudXJsKS5wYXRobmFtZS5sYXN0SW5kZXhPZignLycpICsgMSkgOiAnYXV0bycsIHR5cGU6ICdlc20nLCB2ZXJzaW9uOiAnMTMuNC4zJyB9O1xuIl0sIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6WzBdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/packageInfo.js\n");
+
+/***/ }),
+
+/***/ "(rsc)/./node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/shim.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/shim.js ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _polkadot_x_bigint__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @polkadot/x-bigint */ \"(rsc)/./node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/index.js\");\n/* harmony import */ var _polkadot_x_global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @polkadot/x-global */ \"(rsc)/./node_modules/.pnpm/@polkadot+x-global@13.4.3/node_modules/@polkadot/x-global/index.js\");\n\n\n(0,_polkadot_x_global__WEBPACK_IMPORTED_MODULE_0__.exposeGlobal)('BigInt', _polkadot_x_bigint__WEBPACK_IMPORTED_MODULE_1__.BigInt);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvLnBucG0vQHBvbGthZG90K3gtYmlnaW50QDEzLjQuMy9ub2RlX21vZHVsZXMvQHBvbGthZG90L3gtYmlnaW50L3NoaW0uanMiLCJtYXBwaW5ncyI6Ijs7O0FBQTRDO0FBQ007QUFDbEQsZ0VBQVksV0FBVyxzREFBTSIsInNvdXJjZXMiOlsiL2hvbWUvYWJ1YmFrcmppbW9oL0Rlc2t0b3AvQ29kaW5nIFN0dWZmcy9oYWNrYXRob24vc2VjcmV0LW5ldHdvcmsvbWVtZUFpX2NvaW5fY3JlYXRvci9haS1tZW1lLWNvaW4tY3JlYXRvci9ub2RlX21vZHVsZXMvLnBucG0vQHBvbGthZG90K3gtYmlnaW50QDEzLjQuMy9ub2RlX21vZHVsZXMvQHBvbGthZG90L3gtYmlnaW50L3NoaW0uanMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQmlnSW50IH0gZnJvbSAnQHBvbGthZG90L3gtYmlnaW50JztcbmltcG9ydCB7IGV4cG9zZUdsb2JhbCB9IGZyb20gJ0Bwb2xrYWRvdC94LWdsb2JhbCc7XG5leHBvc2VHbG9iYWwoJ0JpZ0ludCcsIEJpZ0ludCk7XG4iXSwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbMF0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/.pnpm/@polkadot+x-bigint@13.4.3/node_modules/@polkadot/x-bigint/shim.js\n");
+
+/***/ })
+
+};
+;

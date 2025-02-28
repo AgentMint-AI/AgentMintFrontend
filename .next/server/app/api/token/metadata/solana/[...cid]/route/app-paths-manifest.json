@@ -1,0 +1,3 @@
+{
+  "/api/token/metadata/solana/[...cid]/route": "app/api/token/metadata/solana/[...cid]/route.js"
+}

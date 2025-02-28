@@ -1,0 +1,3 @@
+{
+  "/dashboard/tokens/[tokenAddress]/[...actions]/page": "app/dashboard/tokens/[tokenAddress]/[...actions]/page.js"
+}

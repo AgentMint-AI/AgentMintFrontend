@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/abubakrjimoh/Desktop/Coding%20Stuffs/hackathon/secret-network/memeAi_coin_creator/ai-meme-coin-creator/src/app/dashboard/tokens/%5BtokenAddress%5D/%5B...actions%5D/page.tsx"],"sourcesContent":["export default function TokenActionsPage() {\n  return (\n    <div className=\"flex flex-col items-center justify-center min-h-[60vh] p-8 text-center\">\n      <h1 className=\"text-3xl font-bold mb-4\">Token Management Coming Soon!</h1>\n      <p className=\"text-lg text-muted-foreground mb-6\">\n        We&apos;re working hard to bring you advanced token management features\n        including:\n      </p>\n      <ul className=\"text-lg text-muted-foreground list-disc text-left space-y-2 mb-8\">\n        <li>Token Burning</li>\n        <li>Token Minting</li>\n        <li>Token Transfers</li>\n        <li>Token Freezing</li>\n      </ul>\n      <p className=\"text-muted-foreground\">\n        Check back soon for these exciting features!\n      </p>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAe,SAAS;IACtB,qBACE,+YAAC;QAAI,WAAU;;0BACb,+YAAC;gBAAG,WAAU;0BAA0B;;;;;;0BACxC,+YAAC;gBAAE,WAAU;0BAAqC;;;;;;0BAIlD,+YAAC;gBAAG,WAAU;;kCACZ,+YAAC;kCAAG;;;;;;kCACJ,+YAAC;kCAAG;;;;;;kCACJ,+YAAC;kCAAG;;;;;;kCACJ,+YAAC;kCAAG;;;;;;;;;;;;0BAEN,+YAAC;gBAAE,WAAU;0BAAwB;;;;;;;;;;;;AAK3C"}},
+    {"offset": {"line": 84, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 95, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 95, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

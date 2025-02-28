@@ -1,0 +1,3 @@
+{
+  "/api/cid/[...params]/route": "app/api/cid/[...params]/route.js"
+}
