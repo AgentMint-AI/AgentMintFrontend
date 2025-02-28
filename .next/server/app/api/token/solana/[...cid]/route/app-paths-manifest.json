@@ -1,3 +1,0 @@
-{
-  "/api/token/solana/[...cid]/route": "app/api/token/solana/[...cid]/route.js"
-}
