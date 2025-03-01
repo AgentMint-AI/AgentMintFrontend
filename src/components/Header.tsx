@@ -59,7 +59,7 @@ export function Header() {
     },
     {
       href: "/dashboard/agents",
-      label: "AI Agents",
+      label: "Agents",
       icon: <Icons.bot className="w-4 h-4 mr-2" />,
       requiresAuth: true,
     },

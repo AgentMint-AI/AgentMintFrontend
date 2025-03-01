@@ -82,6 +82,36 @@ export function useAgentsByWallet(owner: string) {
   };
 }
 
+export function useTokenDecimals(tokenAddress: string) {
+  const { data, isError, isLoading } = useReadContract({
+    ...wagmiContractConfig,
+    functionName: "decimals",
+    args: [],
+    address: tokenAddress as `0x${string}`,
+  });
+
+  return {
+    data: data as number,
+    isError,
+    isLoading,
+  };
+}
+
+export function useTokenTotalSupply(tokenAddress: string) {
+  const { data, isError, isLoading } = useReadContract({
+    ...wagmiContractConfig,
+    functionName: "totalSupply",
+    args: [],
+    address: tokenAddress as `0x${string}`,
+  });
+
+  return {
+    data: data as bigint,
+    isError,
+    isLoading,
+  };
+}
+
 export function useReadContracts(ownerAddress: string) {
   // For all chains, we'll use the address directly as a string
   const ownerString = ownerAddress;

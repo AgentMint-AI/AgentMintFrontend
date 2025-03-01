@@ -9,6 +9,11 @@ import { TokenActions } from "../_components/TokenActions";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TokenHistory } from "../_components/TokenHistory";
 import { TokenStats } from "../_components/TokenStats";
+import { useState } from "react";
+import { useConnection } from "@solana/wallet-adapter-react";
+import { useSecretNetwork } from "@/providers/secretNetworkContext";
+import { TokenInfoService } from "../../../../../service/TokenInfoService";
+import { TokenInfo } from "../../../../../service/TokenInfoService";
 
 export default function TokenDetailPage({
   params,
@@ -21,6 +26,34 @@ export default function TokenDetailPage({
     isLoading,
     isError,
   } = useTokenShowcaseByAddress(tokenAddress);
+  const [tokenInfo, setTokenInfo] = useState<TokenInfo | null>(null);
+  const { connection } = useConnection();
+  const { secretjs } = useSecretNetwork();
+
+  React.useEffect(() => {
+    async function fetchTokenInfo() {
+      try {
+        // You'll need to determine the chain type based on the address format or URL params
+        const chainType = determineChainType(tokenAddress);
+
+        const info = await TokenInfoService.getTokenInfo(
+          tokenAddress,
+          chainType,
+          {
+            connection, // For Solana
+            secretjs: secretjs!, // For Secret Network
+            rpcUrl: process.env.NEXT_PUBLIC_EVM_RPC_URL, // For EVM
+          }
+        );
+
+        setTokenInfo(info);
+      } catch (error) {
+        console.error("Error fetching token info:", error);
+      }
+    }
+
+    fetchTokenInfo();
+  }, [tokenAddress, connection, secretjs]);
 
   if (isLoading) {
     return (
@@ -47,6 +80,17 @@ export default function TokenDetailPage({
     );
   }
 
+  // Transform TokenInfo into the format expected by TokenStats
+  const formattedToken = {
+    tokenAddress: tokenAddress,
+    chain: determineChainType(tokenAddress),
+    metadata: {
+      totalSupply: tokenInfo?.currentSupply,
+      circulatingSupply: tokenInfo?.adjustedSupply.toString(),
+      // Other metadata fields can be added here
+    },
+  };
+
   return (
     <div className="container max-w-6xl mx-auto px-4 py-16">
       <TokenDetailHeader token={token} />
@@ -59,7 +103,7 @@ export default function TokenDetailPage({
         </TabsList>
 
         <TabsContent value="overview">
-          <TokenStats token={token} />
+          <TokenStats token={formattedToken} />
         </TabsContent>
 
         <TabsContent value="actions">
@@ -72,4 +116,10 @@ export default function TokenDetailPage({
       </Tabs>
     </div>
   );
+}
+
+function determineChainType(address: string): number {
+  if (address.startsWith("0x")) return 1; // EVM
+  if (address.startsWith("secret")) return 0; // Secret Network
+  return 2; // Assume Solana if neither
 }
