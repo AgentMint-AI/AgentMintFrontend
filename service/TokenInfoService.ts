@@ -43,7 +43,7 @@ export class TokenInfoService {
     return {
       decimals: 18, //Erc20 has 18 decimals by default and that is what is configured in the contract
       currentSupply: totalSupply?.toString() ?? "",
-      adjustedSupply: Number(totalSupply) / Math.pow(10, 18),
+      adjustedSupply: Number(totalSupply?.toString() ?? ""),
       features: {
         isMintable: false, // contract mint to the owner
         isBurnable: true, //
