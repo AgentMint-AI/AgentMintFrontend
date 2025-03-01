@@ -81,7 +81,9 @@ interface TokenContractResponse {
 const fetchMetadata = async (cid: string): Promise<TokenMetadata | null> => {
   if (!cid) return null;
   try {
-    const response = await fetch(`/api/token/metadata?cid=${cid}`);
+    const response = await fetch(
+      `https://data-dao.vercel.app/api/cid/metadata/${cid}`
+    );
     if (!response.ok) throw new Error("Failed to fetch metadata");
     return response.json();
   } catch (error) {

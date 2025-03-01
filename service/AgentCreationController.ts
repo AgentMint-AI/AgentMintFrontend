@@ -89,7 +89,7 @@ export class AgentCreationController {
 
   constructor() {
     if (
-      !process.env.NEXT_PUBLIC_RPC_URL ||
+      !process.env.NEXT_PUBLIC_EVM_RPC_URL ||
       !process.env.NEXT_PUBLIC_AGENT_REGISTRY_ADDRESS ||
       !process.env.NEXT_PUBLIC_EVM_PRIVATE_KEY
     ) {
@@ -97,7 +97,7 @@ export class AgentCreationController {
     }
 
     this.agentRegistryService = new AgentRegistryService(
-      process.env.NEXT_PUBLIC_RPC_URL,
+      process.env.NEXT_PUBLIC_EVM_RPC_URL,
       process.env.NEXT_PUBLIC_AGENT_REGISTRY_ADDRESS,
       process.env.NEXT_PUBLIC_EVM_PRIVATE_KEY
     );
