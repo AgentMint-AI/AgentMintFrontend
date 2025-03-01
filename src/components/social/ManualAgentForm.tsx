@@ -424,7 +424,7 @@ export function ManualAgentForm({ userWallet }: { userWallet: string }) {
                       })
                     }
                     className="bg-[#0A0118]"
-                    placeholder="@username"
+                    placeholder="Enter username (not email) without @ symbol"
                   />
                 </div>
                 <div>

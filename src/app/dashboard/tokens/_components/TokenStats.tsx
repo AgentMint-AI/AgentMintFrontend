@@ -24,7 +24,7 @@ export function TokenStats({ token }: TokenStatsProps) {
       icon: <Icons.coins className="w-4 h-4 text-purple-500" />,
     },
     {
-      label: "Circulating Supply",
+      label: "Circulated Supply",
       value: token.metadata?.circulatingSupply || "N/A",
       icon: <Icons.circulate className="w-4 h-4 text-blue-500" />,
     },

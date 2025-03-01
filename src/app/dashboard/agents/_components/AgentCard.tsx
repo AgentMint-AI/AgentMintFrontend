@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { useRouter } from "next/navigation";
 
 interface AgentCardProps {
-  name: string;
+  name: string[];
   status: "running" | "stopped";
   description: string;
   expertise: string[];
@@ -26,11 +26,14 @@ export function AgentCard({
 }: AgentCardProps) {
   const router = useRouter();
 
+  // Extract the actual name from the format 0xc7_name_1
+  const displayName = name[0]?.split("_")[1];
+
   return (
     <Card className="p-6 bg-[#130627] border border-purple-500/20">
       <div className="flex justify-between items-start mb-4">
         <div>
-          <h3 className="text-xl font-bold mb-2">{name}</h3>
+          <h3 className="text-xl font-bold mb-2">{displayName}</h3>
           <p className="text-gray-400 mb-2">{description}</p>
           <div className="flex gap-2 flex-wrap">
             {expertise.map((exp) => (

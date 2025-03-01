@@ -1,31 +1,40 @@
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { useState, useCallback } from "react";
 import { PublicKey } from "@solana/web3.js";
-import { Program, AnchorProvider } from "@coral-xyz/anchor";
-import { solanaTokenConfig } from "@/lib/constant";
+import { getMint } from "@solana/spl-token";
+
+interface TokenInfo {
+  decimals: number;
+  supply: string;
+  adjustedSupply: number;
+  mintAuthority?: string;
+  freezeAuthority?: string;
+}
 
 export function useSolanaRead() {
   const { connection } = useConnection();
   const { publicKey } = useWallet();
-  const [tokenInfo, setTokenInfo] = useState(null);
+  const [tokenInfo, setTokenInfo] = useState<TokenInfo | null>(null);
 
   const getTokenInfo = useCallback(
     async (tokenAddress: string) => {
       if (!publicKey) return;
 
       try {
-        const provider = new AnchorProvider(connection, window.solana, {});
-        const program = new Program(
-          solanaTokenConfig.idl,
-          new PublicKey(solanaTokenConfig.address),
-          provider
-        );
+        // Create a PublicKey object from the token mint address
+        const mintPubkey = new PublicKey(tokenAddress);
 
-        // Fetch token information
-        const tokenAccount = await program.account.token.fetch(
-          new PublicKey(tokenAddress)
-        );
-        setTokenInfo(tokenAccount);
+        // Fetch the mint info
+        const mintInfo = await getMint(connection, mintPubkey);
+
+        setTokenInfo({
+          decimals: mintInfo.decimals,
+          supply: mintInfo.supply.toString(),
+          adjustedSupply:
+            Number(mintInfo.supply) / Math.pow(10, mintInfo.decimals),
+          mintAuthority: mintInfo.mintAuthority?.toBase58(),
+          freezeAuthority: mintInfo.freezeAuthority?.toBase58(),
+        });
       } catch (error) {
         console.error("Error fetching token information:", error);
       }
