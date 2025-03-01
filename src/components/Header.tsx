@@ -82,9 +82,8 @@ export function Header() {
     >
       <div className="container flex h-20 items-center">
         {/* Logo */}
-        <div className="flex flex-1 items-center justify-start">
+        <div className="flex flex-1 items-center justify-start ml-4">
           <Link href="/" className="flex items-center space-x-3">
-            <Icons.sparkles className="w-8 h-8 text-pink-500" />
             <span className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
               AgentMint.AI
             </span>

@@ -117,7 +117,7 @@ class CharacterManagementService {
     try {
       console.log(this.apiUrl);
       const response = await fetch(
-        `${this.apiUrl}/characters/${characterName}/profile`,
+        `${this.apiUrl}/characters/${characterName[0]}/profile`,
         {
           method: "GET",
           headers: {
