@@ -146,43 +146,43 @@ export class TokenInfoService {
 }
 
 // // Example usage:
-async function example() {
-  // EVM example
-  const evmTokenInfo = await TokenInfoService.getTokenInfo(
-    "0xA6a8c021b0250e10ad0d6BD0E62039b9016e37e2", // Token address
-    1, // Chain type (EVM)
-    {
-      rpcUrl: "https://auto-evm.taurus.autonomys.xyz/ws",
-    }
-  );
+// async function example() {
+//   // EVM example
+//   const evmTokenInfo = await TokenInfoService.getTokenInfo(
+//     "0xA6a8c021b0250e10ad0d6BD0E62039b9016e37e2", // Token address
+//     1, // Chain type (EVM)
+//     {
+//       rpcUrl: "https://auto-evm.taurus.autonomys.xyz/ws",
+//     }
+//   );
 
-  // Secret Network example
+//   // Secret Network example
 
-  const secretjs = new SecretNetworkClient({
-    chainId: "pulsar-3",
-    url: "https://pulsar.lcd.secretnodes.com",
-  });
-  const secretTokenInfo = await TokenInfoService.getTokenInfo(
-    "secret136acktxpd0arjprneqxtgxt832n8rnq8rrk7fy", // Token address
-    0, // Chain type (Secret Network)
-    {
-      secretjs,
-    }
-  );
+//   const secretjs = new SecretNetworkClient({
+//     chainId: "pulsar-3",
+//     url: "https://pulsar.lcd.secretnodes.com",
+//   });
+//   const secretTokenInfo = await TokenInfoService.getTokenInfo(
+//     "secret136acktxpd0arjprneqxtgxt832n8rnq8rrk7fy", // Token address
+//     0, // Chain type (Secret Network)
+//     {
+//       secretjs,
+//     }
+//   );
 
-  // Solana example
-  const connection = new Connection("https://api.mainnet-beta.solana.com");
-  const solanaTokenInfo = await TokenInfoService.getTokenInfo(
-    "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN", // Token address
-    2, // Chain type (Solana)
-    {
-      connection,
-    }
-  );
+//   // Solana example
+//   const connection = new Connection("https://api.mainnet-beta.solana.com");
+//   const solanaTokenInfo = await TokenInfoService.getTokenInfo(
+//     "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN", // Token address
+//     2, // Chain type (Solana)
+//     {
+//       connection,
+//     }
+//   );
 
-  console.log("EVM Token Info:", evmTokenInfo);
-  console.log("Secret Token Info:", secretTokenInfo);
-  console.log("Solana Token Info:", solanaTokenInfo);
-}
+//   console.log("EVM Token Info:", evmTokenInfo);
+//   console.log("Secret Token Info:", secretTokenInfo);
+//   console.log("Solana Token Info:", solanaTokenInfo);
+// }
 
-example();
+// example();
