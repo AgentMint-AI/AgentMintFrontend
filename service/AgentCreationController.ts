@@ -84,7 +84,8 @@ export interface AgentCreationRequest {
 
 export class AgentCreationController {
   private apiUrl =
-    process.env.AUTONOMYS_AGENTS_API_URL || "http://localhost:3001/api";
+    process.env.NEXT_PUBLIC_AUTONOMYS_AGENTS_API_URL ||
+    "http://localhost:3001/api";
   private agentRegistryService: AgentRegistryService;
 
   constructor() {
