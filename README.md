@@ -137,8 +137,8 @@ npm run dev
 - `NEXT_PUBLIC_AGENT_REGISTRY_ADDRESS`: Address of the agent registry contract
 
 #### API Services
-- `AUTONOMYS_AGENTS_API_URL`: Endpoint for autonomous agents API
-- `ANTHROPIC_API_KEY`: API key for Anthropic AI services
+- `NEXT_PUBLIC_AUTONOMYS_AGENTS_API_URL`: Endpoint for autonomous agents API
+- `NEXT_PUBLIC_ANTHROPIC_API_KEY`: API key for Anthropic AI services
 
 ## 🛣 Roadmap
 
