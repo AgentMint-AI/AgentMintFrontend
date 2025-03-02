@@ -6,7 +6,7 @@ A full-stack dApp for creating and managing AI-powered meme coins across multipl
 
 ### Multi-Chain Token Creation
 - Support for multiple blockchains:
-  - EVM-compatible chains (Ethereum, BSC, Polygon)
+  - EVM-compatible chains (Ethereum, BSC, Polygon) Currently Deployed on Taurus Autonomys
   - Solana (SPL Tokens)
   - Secret Network (SNIP-20)
   - TON (Jettons)
