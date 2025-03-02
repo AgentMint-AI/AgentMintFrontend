@@ -119,7 +119,7 @@ async function generateMemeCoinOptions({
 }: AIOptionGeneratorProps) {
   try {
     const generator = new MemeCoinAIGenerator(
-      "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"
+      process.env.NEXT_ANTHROPIC_API_KEY!
     );
     const options = await generator.generateOptions(input);
     onOptionsGenerated(options);
